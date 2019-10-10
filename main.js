@@ -18,10 +18,20 @@ for (let i = 0; i < movieNames.length; i++) {
     console.log(movieNames[i])
     starWarsTitles.textContent = movieNames;
 }
-
-
-
+console.log(films[0].opening_crawl)
 //set variables to make it easier to read the code
+
+
+let card1 = {
+    title: films[0].title,
+    crawl: films[0].opening_crawl,
+    character: films[0].characters[2]
+}
+var item1 = document.querySelector('#cardOne')
+item1.innerHTML = `${card1.title}:  ${card1.crawl}`;
+console.log(card1)
+
+
 let childElement;
 let appendChildElement;
 let parentElement;
