@@ -51,28 +51,25 @@ people.forEach((person) => {
     gender.textContent = person.gender;
     pic.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`;
 
-    if (person.gender === 'male') {
-        personDiv.appendChild(name);
-        personDiv.appendChild(gender);
-        personDiv.appendChild(pic);
-        mainArea.appendChild(personDiv);
-    }
-
+    personDiv.appendChild(name);
+    personDiv.appendChild(gender);
+    personDiv.appendChild(pic);
+    mainArea.appendChild(personDiv);
 
 });
 
 function getCharNumber(charURL) {
     let end = charURL.lastIndexOf('/')
     let charID = charURL.substring(end - 2, end)
-    // console.log(charID);
     if (charID.indexOf('/') !== -1) {
-        console.log(charID);
         return charID.slice(1, 2)
     } else {
         return charID
     }
 }
-
+function getPerNumber(url) {
+    let sliceStart = url.slice()
+}
 
 
 
